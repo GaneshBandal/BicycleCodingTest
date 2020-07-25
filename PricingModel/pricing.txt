@@ -1,0 +1,5 @@
+Frame, 1000
+Handle Bar, 1200
+Breaks, 500
+Wheels, 400
+Chain Assembly, 800
