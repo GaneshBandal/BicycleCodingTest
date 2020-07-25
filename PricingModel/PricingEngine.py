@@ -24,8 +24,18 @@ class PricingEngine:
       elif(input == 2):
           print("Input Action")
           exit()
+      elif(input==3):
+          print("Please Provide Information for Component")
+          self.addComponent()
+          exit()
       else:
           exit()
+
+  def addComponent(self):
+      compName = input("Enter Component Name:")
+      compPrice = input("Component Price")
+      input_file = open('pricing.txt', 'a+')
+      input_file.write("\n" + compName + "," + compPrice)
 
 
   def display(self):
@@ -40,6 +50,8 @@ class PricingEngine:
                   total += int(componentPrice.split(',')[1])
                   break
       print("Total Price of Given Component Combination:"+str(total))
+
+
 
 s1 = PricingEngine()
 
